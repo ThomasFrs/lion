@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/png" href="favicon.png"/></link>
-		<title>ThroneRoom</title>
-	<style>
-		b:hover {
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png"/></link>
+    <title>ThroneRoom</title>
+  <style>
+
+.collapsible {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 10px;
+}
+
+.active, .collapsible:hover {
+  background-color: black;
+}
+
+.content {
+  padding: 0 10px;
+  display: none;
+  overflow: hidden;
+  background-color: black;
+}
+    b:hover {
   color: blue;
 }
-		h1 {
-		font-family: "Lato", sans-serif;
+    h1 {
+    font-family: "Lato", sans-serif;
   color: white;
 }
 h2 {
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin-left: 5px;
+  font-family: "Lato", sans-serif;
+  color: white;
 }
 h5 {
   color: lightgray;
@@ -22,6 +47,7 @@ h5 {
 }
 
 p {
+  margin-left: 5px;
   color: lightgray;
   font-family: Verdana, Arial, Tahoma, Serif;
 }
@@ -30,74 +56,72 @@ p {
   box-sizing: border-box;
 }
 
-.row {
-  display: flex;
-}
-.column {
-  flex: 50%;
-  padding: 0px;
-}
-
-.sidenav {
-  height: 100%;
-  width: 140px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
+.topnav {
+  overflow: hidden;
   background-color: orange;
-  overflow-x: hidden;
-  padding-top: 20px;
 }
 
-.sidenav a {
-  padding: 4px 8px 16px 18px;
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: darkorange;
   color: white;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: darkorange;
-}
-
-.main {
-  margin-left: 140px; /* Same as the width of the sidenav */
-  font-size: 16px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
 }
 
 </style>
-	</head>
-	<body style="background-color: black">
-		<div class="sidenav">
-  <a href="Heartbreaker.html"><u>Heartbreaker</u></a>
-  <a href="Q&A.html"><u>Q&A</u></a>
+  </head>
+  <body style="background-color: black">
+    <div class="topnav">
+  <a class="active" href="Heartbreaker.html">Heartbreaker</a>
+  <a href="Q&A.html">Q&A</a>
 </div>
+
 <div class="main">
-		<h1><i>ThroneRoom</i></h1>
-		<p>A management game based on the middle-ages,</p>
-		<p>Build sawmills, quarries... And launch wars against the enemies of the throne!</p>
+<h2>ThroneRoom</h2>
+  <p>A management game based on the middle-ages,</p>
+    <p>Build sawmills, quarries... And launch wars against the enemies of the throne!</p>
 
-		<p><h1 style="color:white"><i>Download</i></h1></p>
 
-		<a href="ThroneRoom.exe" download rel="noopener noreferrer">
-   		<h3><span title="Click to download!" style="color:orange"><b><u>ThroneRoom.exe</u></b></span></h3>
-		</a>
-
-		<h5>- Download the file above</h5>
-		<h5>- Click on the exe. file</h5>
-		<h5>- Select Execut anyway(no virus)</h5>
-		<h5>- Have fun!</h5>
-
-    	<img src="ThroneRoomSS02.png" style="width:45%">
+    <button type="button" class="collapsible"><h1>Download</h1></button>
+<div class="content">
+  <a href="ThroneRoom.exe" download rel="noopener noreferrer">
+      <h3><span title="Click to download!" style="color:orange"><b><u>ThroneRoom.exe</u></b></span></h3>
     </a>
-	</body>
+
+  <h5>- Download the file above</h5>
+    <h5>- Click on the exe. file</h5>
+    <h5>- Select "more info", then "Execut anyway"(no virus)</h5>
+    <h5>- Have fun!</h5>
+</div>
+      <img src="ThroneRoomSS02.png" style="width:45%">
+
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+  </script>
+  </body>
 </html>
