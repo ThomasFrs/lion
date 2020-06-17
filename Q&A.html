@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png"/></link>
+    <title>Q&A</title>
+  <style>
+    h1 {
+    font-family: "Lato", sans-serif;
+  color: white;
+}
+h2 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+p {
+  color: lightgray;
+  font-family: Verdana, Arial, Tahoma, Serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+  padding: 0px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 4px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: darkorange;
+}
+
+.main {
+  margin-left: 140px; /* Same as the width of the sidenav */
+  font-size: 16px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+  </head>
+  <body style="background-color: black">
+    <div class="sidenav">
+  <a href="index.html"><u>Back</u></a>
+</div>
+<div class="main">
+    <h1><i>Questions & Answers</i></h1>
+    <p>Here is the place where questions are answered!</p>
+
+    <p><h2 style="color:white"><i>Where do I download the game?</i></h2></p>
+    </a>
+    <p>You can download the game now by hitting "Back" on the left pannel, then Click on "ThroneRoom.exe".</p>
+    <p><h2 style="color:white"><i>How do I run it?</i></h2></p>
+    </a>
+    <p>Run the game by clicking on throneroom.exe in the folder where you downloaded it.</p>
+    <p><h2 style="color:white"><i>Is there any risk of malware infection of damage on my computer?</i></h2></p>
+    </a>
+    <p>No, Windows defender restrains small developpers from publishing games with "Unknown Publisher" feature.</p>
+    <p><h2 style="color:white"><i>Can I run this on any OS?</i></h2></p>
+    </a>
+    <p>Only Windows OS is capable of running this file.</p>
+
+    <br/>
+    <p><h2 style="color:white"><i>How can I play the game?</i></h2></p>
+    </a>
+    <p>When running the game, a tutorial section will appear in order to explain the basics.</p>
+    <p><h2 style="color:white"><i>I cannot understand, is there another language available?</i></h2></p>
+    </a>
+    <p>Not yet.</p>
+  </body>
+</html>
