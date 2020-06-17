@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png"/></link>
+    <title>Contact</title>
+  <style>
+    h1 {
+    font-family: "Lato", sans-serif;
+  color: white;
+}
+h2 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+p {
+  color: lightgray;
+  font-family: Verdana, Arial, Tahoma, Serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+  padding: 0px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 4px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: darkorange;
+}
+
+.main {
+  margin-left: 140px; /* Same as the width of the sidenav */
+  font-size: 16px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+  </head>
+  <body style="background-color: black">
+    <div class="sidenav">
+  <a href="index.html"><u>Throne<br/>Room</u></a>
+</div>
+<div class="main">
+    <h1><i>Heartbreaker</i></h1>
+    <p>Not available yet.</p>
+  </body>
+</html>
